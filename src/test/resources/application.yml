@@ -1,0 +1,24 @@
+server:
+  servlet:
+    # 请求数据转码UTF8
+    encoding:
+      enabled: true
+      charset: UTF-8
+      force: true
+
+############################# spring config start ############################
+
+spring:
+  mvc:
+    # 打印 web-log
+    log-request-details: true
+  datasource:
+    # 配置数据库连接
+    url: jdbc:postgresql://localhost:5432/keepBook
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
